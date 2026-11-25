@@ -1,1 +1,0 @@
-import{t as e}from"./org-6-eaqO7W.js";import{In as t,kn as n}from"./useDirectors-BoYuRp3F.js";function r(){let r=n();return e.features.personnel?r?t(r)?`open`:`blocked`:`wait`:`blocked`}export{r as t};
