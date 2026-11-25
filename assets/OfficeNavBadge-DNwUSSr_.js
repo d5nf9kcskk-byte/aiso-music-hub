@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-By8HlURe.js";import{o as t,p as n}from"./useOffice-BASVr4gj.js";var r=e();function i({extra:e=0}){let{threads:i}=t(),a=i.filter(n).length+e;return a>0?(0,r.jsx)(`span`,{className:`dir-nav-badge`,children:a}):null}export{i as default};

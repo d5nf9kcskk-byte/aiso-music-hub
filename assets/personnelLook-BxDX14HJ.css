@@ -1,0 +1,1 @@
+@media screen{:root[data-hub2=on]:not([data-pub-theme=dark]):has(.dir-app:not([data-dir-theme=dark])){--dir-bg:var(--hub2-bg)}:root[data-hub2=on] .dir-app[data-dir-theme=dark]{--dir-primary:#9a6a1c}}
