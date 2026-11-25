@@ -1,0 +1,77 @@
+{
+  "name": "AISO Hub",
+  "short_name": "AISO",
+  "description": "Schedule, music and updates for the Atlanta International Symphony Orchestra.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#f6f7f9",
+  "theme_color": "#0B1830",
+  "orientation": "any",
+  "lang": "en",
+  "categories": [
+    "music",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/aiso-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/aiso-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/aiso-icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/aiso-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/aiso-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Calendar",
+      "url": "/calendar",
+      "icons": [
+        {
+          "src": "/aiso-icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Music",
+      "url": "/repertoire",
+      "icons": [
+        {
+          "src": "/aiso-icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

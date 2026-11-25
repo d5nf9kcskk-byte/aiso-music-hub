@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://apis.google.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ 'sha256-Idt2Wwg2PeTOOla82HhTb6uRusSkra9w5igT/IpjQK8=' 'sha256-NUtJAyJEz2wTibsY+d5Uzx1fkOGh1fWRez3Is0MpYiw='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.googleusercontent.com https://firebasestorage.googleapis.com; media-src 'self' blob: https://firebasestorage.googleapis.com; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firebasestorage.googleapis.com https://www.googleapis.com https://corsproxy.io https://us-central1-aisymphony-hub.cloudfunctions.net https://aisymphony-hub.firebaseapp.com https://content-firebaseappcheck.googleapis.com https://firebaseinstallations.googleapis.com https://fcmregistrations.googleapis.com https://fcm.googleapis.com; frame-src https://aisymphony-hub.firebaseapp.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <title>AISO Hub</title>
+
+    <!-- PWA / iOS home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Atlanta International Symphony Orchestra" />
+    <meta name="theme-color" content="#0B1830" />
+
+    <link rel="preconnect" href="https://firestore.googleapis.com" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/png" href="/aiso-favicon.png" />
+    <link rel="apple-touch-icon" href="/aiso-apple-touch-icon.png" />
+    <script type="module" crossorigin src="/assets/index-Bk9yqs86.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-QTnfLwEv.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-CZI7_Jkm.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-CZgWQFsJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/org-ck70PYhH.js">
+    <link rel="modulepreload" crossorigin href="/assets/index.esm-Dgeyja4M.js">
+    <link rel="modulepreload" crossorigin href="/assets/firebase-B31gMgYU.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-cQApAsbP.js">
+    <link rel="modulepreload" crossorigin href="/assets/useDirectors-SnwjH39U.js">
+    <link rel="modulepreload" crossorigin href="/assets/watchCollection-CEGgcLYd.js">
+    <link rel="modulepreload" crossorigin href="/assets/index.esm-0AW8sigG.js">
+    <link rel="modulepreload" crossorigin href="/assets/index.esm-D2TKZEyM.js">
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-By8HlURe.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BBLSg9wP.css">
+  </head>
+  <!-- spellcheck: Firefox's default checks multi-line boxes only, so every
+       single-line Title field went unchecked there. The attribute inherits,
+       so this covers the app; fields that opt OUT (search boxes, pasted
+       blobs, addresses) set spellcheck={false} explicitly, which wins. -->
+  <body spellcheck="true">
+    <!-- Dark-view choice (#dark-view): resolve Auto/Light/Dark before first
+         paint so a stored choice never flashes the wrong scheme. Kept current
+         after load by src/public/theme.ts. -->
+    <script>
+      (function () {
+        var choice = null;
+        try { choice = localStorage.getItem('pub.theme'); } catch (e) { /* private mode */ }
+        var dark = choice === 'dark' ||
+          (choice !== 'light' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-pub-theme', dark ? 'dark' : 'light');
+        // Hub 2.0 look (#hub2-look): on for everyone once the org config says
+        // so (hub2.forEveryone, written in at build time); until then the
+        // owner's on-device preview, same key as src/shared/hub2Preview.ts.
+        // Never read from the URL.
+        var hub2Everyone = true;
+        try { if (hub2Everyone || localStorage.getItem('hub2.preview') === 'on') document.documentElement.setAttribute('data-hub2', 'on'); } catch (e) { if (hub2Everyone) document.documentElement.setAttribute('data-hub2', 'on'); }
+      })();
+    </script>
+    <div id="root"></div>
+    <!-- GitHub Pages SPA fix: restore the URL saved by 404.html on refresh/direct link -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem('spa_redirect');
+        if (redirect) {
+          sessionStorage.removeItem('spa_redirect');
+          if (redirect !== location.href) {
+            history.replaceState(null, null, redirect);
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
