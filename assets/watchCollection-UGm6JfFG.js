@@ -1,1 +1,0 @@
-import{p as e}from"./firebase-B31gMgYU.js";import{nr as t,rr as n}from"./useDirectors-DrxEzbsm.js";function r(r,i,a,o,s){let c=!0,l,u=()=>{},d=()=>{c&&(u=e(r,e=>{n(i),a(e),o?.()},()=>{t(i),s?.(),o?.(),c&&(l=setTimeout(d,3e3))}))};return d(),()=>{c=!1,l&&clearTimeout(l),u()}}export{r as t};
